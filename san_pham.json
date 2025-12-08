@@ -1,0 +1,332 @@
+[
+    {
+        "id": "SP001",
+        "ten": "Laptop Dell XPS 13",
+        "sl": 7,
+        "gia": 25000000
+    },
+    {
+        "id": "SP002",
+        "ten": "iPhone 15 Pro Max",
+        "sl": 20,
+        "gia": 34000000
+    },
+    {
+        "id": "SP003",
+        "ten": "Chuột Logitech G502",
+        "sl": 50,
+        "gia": 1200000
+    },
+    {
+        "id": "SP004",
+        "ten": "Bàn phím cơ Keychron",
+        "sl": 30,
+        "gia": 2500000
+    },
+    {
+        "id": "SP005",
+        "ten": "Tai nghe Sony WH-1000XM5",
+        "sl": 15,
+        "gia": 8000000
+    },
+    {
+        "id": "API_0",
+        "ten": "Laptop Dell Inspiron 15",
+        "sl": 7,
+        "gia": 15000000
+    },
+    {
+        "id": "API_1",
+        "ten": "iPhone 15 Pro Max",
+        "sl": 3,
+        "gia": 30000000
+    },
+    {
+        "id": "API_2",
+        "ten": "Chuột Logitech G102",
+        "sl": 19,
+        "gia": 500000
+    },
+    {
+        "id": "API_3",
+        "ten": "Bàn phím cơ Keychron",
+        "sl": 14,
+        "gia": 1200000
+    },
+    {
+        "id": "API_4",
+        "ten": "Tai nghe Sony WH-1000XM5",
+        "sl": 5,
+        "gia": 6500000
+    },
+    {
+        "id": "API_5",
+        "ten": "Màn hình LG 24 inch",
+        "sl": 10,
+        "gia": 3200000
+    },
+    {
+        "id": "API_6",
+        "ten": "RAM Kingston 8GB",
+        "sl": 50,
+        "gia": 750000
+    },
+    {
+        "id": "API_7",
+        "ten": "SSD Samsung 500GB",
+        "sl": 30,
+        "gia": 1400000
+    },
+    {
+        "id": "API_8",
+        "ten": "Sạc dự phòng Anker",
+        "sl": 25,
+        "gia": 800000
+    },
+    {
+        "id": "API_9",
+        "ten": "Cáp sạc iPhone Type-C",
+        "sl": 100,
+        "gia": 250000
+    },
+    {
+        "id": "API_10",
+        "ten": "MacBook Air M2",
+        "sl": 4,
+        "gia": 26000000
+    },
+    {
+        "id": "API_11",
+        "ten": "Samsung Galaxy S24 Ultra",
+        "sl": 6,
+        "gia": 28000000
+    },
+    {
+        "id": "API_12",
+        "ten": "iPad Gen 9",
+        "sl": 12,
+        "gia": 7500000
+    },
+    {
+        "id": "API_13",
+        "ten": "Loa Bluetooth JBL",
+        "sl": 15,
+        "gia": 2100000
+    },
+    {
+        "id": "API_14",
+        "ten": "Webcam Logitech C920",
+        "sl": 8,
+        "gia": 1800000
+    },
+    {
+        "id": "API_15",
+        "ten": "Ghế công thái học",
+        "sl": 5,
+        "gia": 4500000
+    },
+    {
+        "id": "API_16",
+        "ten": "Lót chuột cỡ lớn",
+        "sl": 40,
+        "gia": 150000
+    },
+    {
+        "id": "API_17",
+        "ten": "Tay cầm chơi game PS5",
+        "sl": 9,
+        "gia": 1600000
+    },
+    {
+        "id": "API_18",
+        "ten": "Ổ cứng HDD 1TB WD",
+        "sl": 20,
+        "gia": 1100000
+    },
+    {
+        "id": "API_19",
+        "ten": "USB 64GB Sandisk",
+        "sl": 60,
+        "gia": 120000
+    },
+    {
+        "id": "API_20",
+        "ten": "Laptop Asus TUF Gaming",
+        "sl": 6,
+        "gia": 21000000
+    },
+    {
+        "id": "API_21",
+        "ten": "Chuột không dây Apple",
+        "sl": 11,
+        "gia": 2000000
+    },
+    {
+        "id": "API_22",
+        "ten": "Bàn phím giả cơ Dareu",
+        "sl": 22,
+        "gia": 450000
+    },
+    {
+        "id": "API_23",
+        "ten": "Tai nghe Airpods 3",
+        "sl": 13,
+        "gia": 4200000
+    },
+    {
+        "id": "API_24",
+        "ten": "Đồng hồ Apple Watch SE",
+        "sl": 8,
+        "gia": 6000000
+    },
+    {
+        "id": "API_25",
+        "ten": "Đồng hồ Garmin",
+        "sl": 4,
+        "gia": 8500000
+    },
+    {
+        "id": "API_26",
+        "ten": "Máy in Canon 2900",
+        "sl": 3,
+        "gia": 3800000
+    },
+    {
+        "id": "API_27",
+        "ten": "Router Wifi TP-Link",
+        "sl": 18,
+        "gia": 650000
+    },
+    {
+        "id": "API_28",
+        "ten": "Card màn hình RTX 3060",
+        "sl": 5,
+        "gia": 8900000
+    },
+    {
+        "id": "API_29",
+        "ten": "Case máy tính Xigmatek",
+        "sl": 10,
+        "gia": 900000
+    },
+    {
+        "id": "API_30",
+        "ten": "Nguồn máy tính 650W",
+        "sl": 14,
+        "gia": 1200000
+    },
+    {
+        "id": "API_31",
+        "ten": "Quạt tản nhiệt CPU",
+        "sl": 25,
+        "gia": 550000
+    },
+    {
+        "id": "API_32",
+        "ten": "Micro thu âm HyperX",
+        "sl": 6,
+        "gia": 2800000
+    },
+    {
+        "id": "API_33",
+        "ten": "Giá đỡ màn hình (Arm)",
+        "sl": 12,
+        "gia": 750000
+    },
+    {
+        "id": "API_34",
+        "ten": "Máy tính bảng Xiaomi Pad",
+        "sl": 9,
+        "gia": 8000000
+    },
+    {
+        "id": "API_35",
+        "ten": "Điện thoại Oppo Reno",
+        "sl": 15,
+        "gia": 9500000
+    },
+    {
+        "id": "API_36",
+        "ten": "Điện thoại Xiaomi Redmi",
+        "sl": 20,
+        "gia": 4500000
+    },
+    {
+        "id": "API_37",
+        "ten": "Kính cường lực iPhone",
+        "sl": 200,
+        "gia": 50000
+    },
+    {
+        "id": "API_38",
+        "ten": "Ốp lưng chống sốc",
+        "sl": 150,
+        "gia": 120000
+    },
+    {
+        "id": "API_39",
+        "ten": "Gậy chụp ảnh 3 chân",
+        "sl": 30,
+        "gia": 180000
+    },
+    {
+        "id": "API_40",
+        "ten": "Đèn bàn học chống cận",
+        "sl": 16,
+        "gia": 350000
+    },
+    {
+        "id": "API_41",
+        "ten": "Ổ cắm điện thông minh",
+        "sl": 22,
+        "gia": 250000
+    },
+    {
+        "id": "API_42",
+        "ten": "Robot hút bụi Xiaomi",
+        "sl": 4,
+        "gia": 5500000
+    },
+    {
+        "id": "API_43",
+        "ten": "Máy lọc không khí",
+        "sl": 5,
+        "gia": 3200000
+    },
+    {
+        "id": "API_44",
+        "ten": "Camera an ninh Wifi",
+        "sl": 18,
+        "gia": 600000
+    },
+    {
+        "id": "API_45",
+        "ten": "Thẻ nhớ MicroSD 32GB",
+        "sl": 80,
+        "gia": 90000
+    },
+    {
+        "id": "API_46",
+        "ten": "Balo laptop chống nước",
+        "sl": 25,
+        "gia": 450000
+    },
+    {
+        "id": "API_47",
+        "ten": "Túi chống sốc Macbook",
+        "sl": 35,
+        "gia": 200000
+    },
+    {
+        "id": "API_48",
+        "ten": "Bộ vệ sinh máy tính",
+        "sl": 50,
+        "gia": 30000
+    },
+    {
+        "id": "API_49",
+        "ten": "Keo tản nhiệt MX-4",
+        "sl": 40,
+        "gia": 150000
+    }
+]
