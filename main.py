@@ -375,9 +375,7 @@ class UngDung:
         self.load_data_ban_hang()
         self.load_lich_su()
 
-    # ==============================
-    # TAB LỊCH SỬ HÓA ĐƠN
-    # ==============================
+    
     def xay_dung_tab_lich_su(self, parent):
         tk.Button(parent, text="Làm mới", command=self.load_lich_su).pack(pady=5)
         tk.Button(parent, text="Xem chi tiết", bg="yellow",
@@ -438,9 +436,7 @@ class UngDung:
                 f"{sp['gia']:,}",
             ))
 
-    # ==============================
-    # TAB QUẢN LÝ KHO + UNDO
-    # ==============================
+    
     def xay_dung_tab_kho(self, parent):
         f = tk.Frame(parent)
         f.pack(pady=5)
@@ -463,6 +459,15 @@ class UngDung:
         tk.Button(f, text="Lưu", bg="green", fg="white", command=self.kho_luu).grid(row=1, column=6, columnspan=2)
 
         tk.Button(f, text="Quay lại (UNDO)", bg="orange", command=self.kho_undo).grid(row=2, column=0, columnspan=4, pady=5)
+        tk.Label(f, text="Tìm kiếm(Mã/Tên):").grid(row=2, column=3, columnspan=4,padx=5)  
+        self.e_tim_kho = tk.Entry(f)
+        self.e_tim_kho.grid(row=2, column=5, columnspan=3, padx=10)
+
+        tk.Button(f, text="Tìm", command=self.tim_kho).grid(
+            row=2, column=7, columnspan=5, padx=10, pady=5)
+        
+        tk.Button(f, text="Hiển thị tất cả", command=self.hien_thi_tat_ca_kho).grid(row=2, column=8, padx=5)
+
 
         self.tree_kho = ttk.Treeview(parent, columns=("id", "ten", "sl", "gia"), show="headings")
         for c, t, w in [
@@ -527,7 +532,7 @@ class UngDung:
 
         ds = self.doc_file(FILE_SP)
 
-        # backup để undo
+        
         self.ghi_file(FILE_SP_BAK, ds)
 
         ds = [x for x in ds if x["id"] != id_xoa]
@@ -591,9 +596,45 @@ class UngDung:
         self.load_kho()
         self.load_data_ban_hang()
 
-    # ==============================
-    # TAB NHÂN SỰ
-    # ==============================
+    def tim_kho(self):
+        tu_khoa = self.e_tim_kho.get().strip().lower()
+
+        # Xóa dữ liệu cũ trên tree
+        for i in self.tree_kho.get_children():
+            self.tree_kho.delete(i)
+
+        ds = self.doc_file(FILE_SP)
+
+        # Nếu ô tìm rỗng → load lại toàn bộ kho
+        if tu_khoa == "":
+            for sp in ds:
+                self.tree_kho.insert("", "end", values=(
+                    sp["id"], sp["ten"], sp["sl"], f"{sp['gia']:,}"
+                ))
+            return
+
+        # Lọc theo MÃ hoặc TÊN
+        for sp in ds:
+            if tu_khoa in sp["id"].lower() or tu_khoa in sp["ten"].lower():
+                self.tree_kho.insert("", "end", values=(
+                    sp["id"], sp["ten"], sp["sl"], f"{sp['gia']:,}"
+                ))
+    def hien_thi_tat_ca_kho(self):
+   
+        self.e_tim_kho.delete(0, tk.END)
+
+
+        for i in self.tree_kho.get_children():
+            self.tree_kho.delete(i)
+
+
+        ds = self.doc_file(FILE_SP)
+        for sp in ds:
+            self.tree_kho.insert("", "end", values=(
+                sp["id"], sp["ten"], sp["sl"], f"{sp['gia']:,}"
+            ))
+
+
     def xay_dung_tab_nhan_su(self, parent):
         f = tk.Frame(parent); f.pack(pady=5)
 
