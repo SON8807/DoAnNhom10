@@ -664,6 +664,15 @@ class UngDung:
         tk.Button(f, text="Xóa", command=self.ns_xoa).grid(row=2, column=4, columnspan=2)
         tk.Button(f, text="Lưu", bg="green", fg="white", command=self.ns_luu).grid(row=2, column=6, columnspan=2)
 
+        tk.Label(f, text="Tìm kiếm (Mã / User / Tên):").grid(row=3, column=0, columnspan=2, pady=5)
+
+        self.e_tim_ns = tk.Entry(f)
+        self.e_tim_ns.grid(row=3, column=2, columnspan=3, padx=5)
+
+        tk.Button(f, text="Tìm", command=self.tim_nhan_su).grid(row=3, column=5, padx=5)
+        tk.Button(f, text="Hiển thị tất cả", command=self.hien_thi_tat_ca_ns).grid(row=3, column=6, padx=5)
+
+
         self.tree_ns = ttk.Treeview(parent, columns=("ma","user","ten","role","luong"), show="headings")
         for c in ["ma","user","ten","role","luong"]:
             self.tree_ns.heading(c, text=c)
@@ -681,6 +690,34 @@ class UngDung:
             self.tree_ns.insert("", "end", values=(
                 u["ma_nv"], u["username"], u["ten"], u["role"], u["luong"]
             ))
+    def tim_nhan_su(self):
+        tu_khoa = self.e_tim_ns.get().strip().lower()
+
+        # Xóa tree cũ
+        for i in self.tree_ns.get_children():
+            self.tree_ns.delete(i)
+
+        ds = self.doc_file(FILE_USER)
+
+        # Nếu không nhập gì → load lại tất cả
+        if tu_khoa == "":
+            for u in ds:
+                self.tree_ns.insert("", "end", values=(
+                    u["ma_nv"], u["username"], u["ten"], u["role"], u["luong"]
+                ))
+            return
+
+        # Tìm theo mã / username / tên / role
+        for u in ds:
+            if (
+                tu_khoa in u["ma_nv"].lower()
+                or tu_khoa in u["username"].lower()
+                or tu_khoa in u["ten"].lower()
+                or tu_khoa in u["role"].lower()
+            ):
+                self.tree_ns.insert("", "end", values=(
+                    u["ma_nv"], u["username"], u["ten"], u["role"], u["luong"]
+                ))
 
     def ns_chon_dong(self, event=None):
         chon = self.tree_ns.focus()
@@ -702,6 +739,13 @@ class UngDung:
         self.c_n_role.set(u["role"])
         self.e_n_ngay.delete(0, tk.END); self.e_n_ngay.insert(0, u["ngay_vao_lam"])
         self.e_n_luong.delete(0, tk.END); self.e_n_luong.insert(0, u["luong"])
+    def hien_thi_tat_ca_ns(self):
+        self.e_tim_ns.delete(0, tk.END)
+
+        for i in self.tree_ns.get_children():
+            self.tree_ns.delete(i)
+
+        self.load_ns()
 
     def ns_chuan_bi_them(self):
         self.che_do_ns = "them"
