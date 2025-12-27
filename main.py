@@ -3,7 +3,7 @@ from tkinter import ttk, messagebox
 import json, os
 from datetime import datetime
 import requests
-
+import re
 # ==============================
 # CẤU HÌNH FILE DỮ LIỆU
 # ==============================
@@ -783,6 +783,19 @@ class UngDung:
         role = self.c_n_role.get().strip()
         ngay = self.e_n_ngay.get().strip()
 
+        # ===== KIỂM TRA MẬT KHẨU MẠNH =====
+        pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$"
+        if not re.match(pattern, pw):
+            messagebox.showerror(
+                "Mật khẩu yếu",
+                "Mật khẩu phải có:\n"
+                "- Ít nhất 8 ký tự\n"
+                "- 1 chữ hoa\n"
+                "- 1 chữ thường\n"
+                "- 1 số\n"
+                "- 1 ký tự đặc biệt (@, #, !, ...)"
+            )
+            return
         try:
             luong = int(self.e_n_luong.get())
         except:
