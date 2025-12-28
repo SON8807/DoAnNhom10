@@ -96,9 +96,9 @@ class UngDung:
         # tạo user mặc định
         if not os.path.exists(FILE_USER):
             users = [
-                {"ma_nv": "NV000", "username": "admin", "password": "123", "role": "admin",
+                {"ma_nv": "NV000", "username": "admin", "password": "Ad00001@", "role": "admin",
                  "ten": "Quản Trị Viên", "ngay_vao_lam": "2020-01-01", "luong": 2000000},
-                {"ma_nv": "NV001", "username": "nv1", "password": "123", "role": "user",
+                {"ma_nv": "NV001", "username": "nv1", "password": "Nv1@01234", "role": "user",
                  "ten": "Nhân Viên", "ngay_vao_lam": "2022-01-01", "luong": 1800000},
             ]
             self.ghi_file(FILE_USER, users)
